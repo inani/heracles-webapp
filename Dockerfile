@@ -8,7 +8,7 @@ MAINTAINER Florian Kleber <kleberbaum@erebos.xyz>
 WORKDIR /var/www/
 
 # add webapp
-COPY ./build/* ./
+COPY build/* ./
 
 # update, install and cleaning
 RUN echo "## Installing base ##" && \
@@ -32,6 +32,9 @@ EXPOSE 80
 
 # version w/ volume disabled
 #VOLUME /var/www/wp-content
+
+# add license
+ADD LICENSE /
 
 # deploy init script
 COPY docker-entrypoint.sh /

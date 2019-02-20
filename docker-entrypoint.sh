@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # developed by Florian Kleber for terms of use have a look at the LICENSE file
 

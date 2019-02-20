@@ -1,28 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+//npm install node-sass apollo-boost react-apollo graphql --save
 
+// standard libs
+
+// other libs
+import React, { Component } from "react";
+
+// standard components
+import "./App.scss";
+
+// other components
+import "./App.scss";
+
+// pages
+import Homepage from "./components/pages/Homepage";
+
+// Rendering of all active pages
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    return <Homepage />;
   }
 }
 
+// Exporting of App (all active pages)
 export default App;

@@ -8,7 +8,7 @@ MAINTAINER Florian Kleber <kleberbaum@erebos.xyz>
 WORKDIR /var/www/
 
 # add webapp
-COPY . .
+COPY ./build/* .
 
 # update, install and cleaning
 RUN echo "## Installing base ##" && \
@@ -34,7 +34,8 @@ EXPOSE 80
 #VOLUME /var/www/wp-content
 
 # deploy init script
-ADD docker-entrypoint.sh /
+COPY docker-entrypoint.sh /
 
 # starting via tini as init
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
+

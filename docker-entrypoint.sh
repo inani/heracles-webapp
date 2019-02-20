@@ -7,3 +7,4 @@ set -xe
 
 # execute CMD[]
 exec "$@"
+

@@ -22,8 +22,6 @@ RUN echo "## Installing base ##" && \
         nginx@main \
         tini@community \
     \
-    && cp ./LICENSE / \
-    && mv ./nginx.conf /etc/nginx/ \
     && chown -R nobody.nobody /var/www \
     \
     && rm -rf /tmp/* /var/cache/apk/* /var/cache/distfiles/*
@@ -34,7 +32,10 @@ EXPOSE 80
 #VOLUME /var/www/wp-content
 
 # add license
-ADD LICENSE /
+COPY LICENSE /
+
+# add license
+COPY nginx.conf /etc/nginx/
 
 # deploy init script
 COPY docker-entrypoint.sh /

@@ -8,7 +8,7 @@ MAINTAINER Florian Kleber <kleberbaum@erebos.xyz>
 WORKDIR /var/www/
 
 # add webapp
-COPY ./build/* .
+COPY ./build/* ./
 
 # update, install and cleaning
 RUN echo "## Installing base ##" && \

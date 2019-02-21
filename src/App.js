@@ -6,10 +6,11 @@
 import React, { Component } from "react";
 
 // standard components
-import "./App.scss";
+import "./mdb/scss/App.scss";
 
 // other components
-import "./App.scss";
+//import "./App.scss";
+
 
 // pages
 import Homepage from "./components/pages/Homepage";
@@ -17,7 +18,9 @@ import Homepage from "./components/pages/Homepage";
 // Rendering of all active pages
 class App extends Component {
   render() {
-    return <Homepage />;
+    return (
+    <Homepage />
+    );
   }
 }
 

@@ -19,7 +19,7 @@ class TestDaten extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <div className="MessdatenList">
+        <div className="MessdatenList card">
           <ul className="Daten">
             <Aqms />
           </ul>

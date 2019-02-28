@@ -11,6 +11,8 @@ import logo from "./logo.svg";
 // organisms
 import TestDaten from "../organisms/TestDaten";
 
+import Btn from "../atoms/button/index.js";
+
 // Rendering of all active organisms
 class Homepage extends Component {
   render() {
@@ -30,7 +32,9 @@ class Homepage extends Component {
           >
             Learn React
           </a>
-          <TestDaten />
+          
+          <Btn href="/testpage" btntype="R" btnstyle="oWHITE">Test</Btn>
+
         </header>
       </main>
     );

@@ -40,14 +40,14 @@ class MessdatenList extends Component {
           <li>
             {fu.UID}
             <ul>
-              <li>{fu.Datum}</li>
-              <li>{fu.DatumZeit}</li>
-              <li>{fu.Temperatur}</li>
-              <li>{fu.Luftdruck}</li>
-              <li>{fu.Luftfeuchtigkeit}</li>
-              <li>{fu.VOC}</li>
-              <li>{fu.FEINSTAUBPM100}</li>
-              <li>{fu.FEINSTAUBPM25}</li>
+              <li>Date: {fu.Datum}</li>
+              <li>DateTime: {fu.DatumZeit}</li>
+              <li>Temp: {fu.Temperatur}</li>
+              <li>Luftdruck: {fu.Luftdruck}</li>
+              <li>Luftfeuchtigkeit: {fu.Luftfeuchtigkeit}</li>
+              <li>VOC: {fu.VOC}</li>
+              <li>Feinstaub PM100: {fu.FEINSTAUBPM100}</li>
+              <li>Feinstaub PM25: {fu.FEINSTAUBPM25}</li>
             </ul>
           </li>
         </ul>

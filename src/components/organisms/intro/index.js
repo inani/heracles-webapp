@@ -1,7 +1,13 @@
 import * as React from 'react'
 
+//Import atoms
+import Btn from "../../atoms/button"
+
 import Nav from "../../molecules/nav";
 import Hero from "../../molecules/hero";
+import HeroContent from "../../molecules/hero_content";
+
+
 
 const Intro = (props: Props): React.Element<*> => {
     const { items } = props;
@@ -14,16 +20,25 @@ const Intro = (props: Props): React.Element<*> => {
         }
     }
 
+    function GetType(type){
+        if (type === "text"){
+            return "nav-link m-1";
+        }else{
+            return "ml-5 btn btn-outline-white btn-rounded";
+        }
+    }
+
     const App = () => [
         <Nav theme="D">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto d-flex justify-content-center align-items-center">
             {items.map((item, i) => {
-            console.log("Entered");
-            return (<li key={i} className={GetState(item.active)} data-id={i}><a class="nav-link" href={item.href}>{item.text}</a></li>) 
+            return (<li key={i} className={GetState(item.active)} data-id={i}><a className={GetType(item.type)} href={item.href}>{item.text}</a></li>) 
             })}
         </ul>
        </Nav>,
-       <Hero>test</Hero>
+       <Hero>
+            <HeroContent/>
+       </Hero>
     ];
 
     return (

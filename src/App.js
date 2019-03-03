@@ -1,3 +1,4 @@
+//To get all dependencies: npm install
 //npm install node-sass apollo-boost react-apollo graphql --save
 
 // standard libs
